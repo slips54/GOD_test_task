@@ -1,0 +1,123 @@
+{
+  "boxes" : [
+    {
+      "id": 1,
+      "name": "Рарный<br/> сундук",
+      "rarity": "rare",
+      "favorite": true,
+      "sun_currency": 140,
+      "medal_currency": 220,
+      "preview" : "rare.png",
+      "prizes": [
+        {
+          "name": "приз 1",
+          "availability": false,
+          "preview" : "1.jpg"
+        },
+        {
+          "name": "приз 2",
+          "availability": true,
+          "preview" : "1.jpg"
+        },
+        {
+          "name": "приз 3",
+          "availability": false,
+          "preview" : "1.jpg"
+        },
+        {
+          "name": "приз 4",
+          "availability": false,
+          "preview" : "1.jpg"
+        },
+        {
+          "name": "приз 5",
+          "availability": false,
+          "preview" : "1.jpg"
+        },
+        {
+          "name": "приз 6",
+          "availability": false,
+          "preview" : "1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Обычный<br/> сундук",
+      "rarity": "normal",
+      "favorite": false,
+      "sun_currency": 80,
+      "medal_currency": 140,
+      "preview" : "normal.png",
+      "prizes": [
+        {
+          "name": "приз 1",
+          "availability": false,
+          "preview" : "2.jpg"
+        },
+        {
+          "name": "приз 2",
+          "availability": false,
+          "preview" : "3.jpg"
+        },
+        {
+          "name": "приз 3",
+          "availability": false,
+          "preview" : "4.jpg"
+        },
+        {
+          "name": "приз 4",
+          "availability": false,
+          "preview" : "5.jpg"
+        },
+        {
+          "name": "приз 5",
+          "availability": false
+        },
+        {
+          "name": "приз 6",
+          "availability": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "КЕЙС ЗА победы<br/> в матчах",
+      "rarity": "for_victories",
+      "sun_currency": 80,
+      "medal_currency": 140,
+      "wins_needed" : 5,
+      "preview" : "for_v.png",
+      "prizes": [
+        {
+          "name": "приз 1",
+          "availability": false,
+          "preview" : "2.jpg"
+        },
+        {
+          "name": "приз 2",
+          "availability": false,
+          "preview" : "3.jpg"
+        },
+        {
+          "name": "приз 3",
+          "availability": false,
+          "preview" : "4.jpg"
+        },
+        {
+          "name": "приз 4",
+          "availability": false,
+          "preview" : "5.jpg"
+        },
+        {
+          "name": "приз 5",
+          "availability": false
+        },
+        {
+          "name": "приз 6",
+          "availability": false
+        }
+      ]
+    }
+  ]
+}
