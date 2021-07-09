@@ -1,0 +1,28 @@
+@mixin translateX($position: -50%) {
+  transform: translateX($position);
+}
+
+@mixin translateY($position: -50%) {
+  transform: translateY($position);
+}
+
+@mixin translateXY($positionX: -50%, $positionY: -50%) {
+  transform: translate($positionX, $positionY);
+}
+
+@mixin bg-cover($src: null) {
+  @if $src != null {
+    background-image: url($src);
+  }
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+@mixin bg-contain($src: null) {
+  @if $src != null {
+    background-image: url($src);
+  }
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}

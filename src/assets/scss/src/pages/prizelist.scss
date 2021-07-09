@@ -1,0 +1,262 @@
+.prizelist-container{
+  position: absolute;
+  width: 82em;
+  height: 35em;
+  top: 50%;
+  left: 50%;
+  @include translateXY();
+  border: 1px solid $gold;
+  border-width: 1px 1px 1px 0;
+  border-radius: 3em 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  &:before{
+    content: '';
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: 0px;
+    height: 3.8em;
+    width: 3em;
+    border-left: 1px solid $gold;
+    border-top: 1px solid $gold;
+    border-radius: 3em 0 0;
+    z-index: 1;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: calc(-1px + 3.8em + 6.5em);
+    bottom: 0;
+    left: 0px;
+    width: 0em;
+    border-left: 1px solid $gold;
+    border-radius: 3em 0 0;
+    z-index: 1;
+  }
+}
+.prizelist-container_title{
+  position: absolute;
+  top: 4.6em;
+  left: 0;
+  text-transform: uppercase;
+  line-height: 1.5;
+  width: 8rem;
+  z-index: 1;
+}
+.prizelist_weapons{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 35.6em;
+  > img{
+    position: relative;
+    top: 13rem;
+    max-width: 82%;
+    max-height: 100%;
+    left: 50%;
+    @include translateX();
+  }
+}
+.prizelist_classes{
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: calc(100% - 35.6em);
+}
+.prizelist_classes-grid{
+  display: grid;
+  grid-template-rows: repeat(3, 1fr) 2fr;
+  grid-template-columns: repeat(5, 1fr);
+  border-left: 1px solid rgba($gold, 0.1);
+  border-top: 1px solid rgba($gold, 0.1);
+  > div{
+    border-right: 1px solid rgba($gold, 0.1);
+    border-bottom: 1px solid rgba($gold, 0.1);
+  }
+}
+.prizelist_classes-content{
+  display: grid;
+  grid-template-rows: 2fr 1fr 2fr;
+  grid-template-columns: 1fr;
+  .prizelist_classes-info{
+    position: relative;
+    .info_text{
+      position: absolute;
+      bottom: 0;
+      padding-left: 3rem;
+      padding-right: 4.8rem;
+      padding-bottom: 1rem;
+      font-size: 1.3em;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 1.3rem;
+        height: 1.4rem;
+        bottom: 100%;
+        left: 3rem;
+        margin-bottom: 1.1rem;
+        @include bg-contain('/icons/legend.svg');
+      }
+    }
+  }
+  .prizelist_classes-type_list{
+    display: flex;
+    justify-content: center;
+    .archetype_item{
+      position: relative;
+      display: flex;
+      height: 100%;
+      flex-basis: 20%;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover{
+        .archetype_icon{
+          background: rgba($yellow, 0.3);
+          box-shadow: inset 0px -5px 15px rgba($gold, 0.7);
+        }
+      }
+      &.active{
+        .archetype_icon{
+          cursor: default;
+          background: rgba($yellow, 0.3);
+          box-shadow: none;
+        }
+      }
+    }
+    .archetype_icon{
+      width: 6rem;
+      height: 6rem;
+      border: 1px solid $yellow;
+      border-radius:50%;
+      box-sizing: border-box;
+      transition: .5s background ease, .5s box-shadow ease;
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translateXY();
+      }
+      &.archer:after{
+        width: 3.2rem;
+        height: 3.1rem;
+        @include bg-contain('/icons/archer.svg');
+      }
+      &.monk:after{
+        width: 3rem;
+        height: 3rem;
+        @include bg-contain('/icons/monk.svg');
+      }
+      &.wizard:after{
+        width: 3.2rem;
+        height: 3.3rem;
+        @include bg-contain('/icons/wizard.svg');
+      }
+      &.assassin:after{
+        width: 4.2rem;
+        height: 3.1rem;
+        @include bg-contain('/icons/assassin.svg');
+      }
+      &.warrior:after{
+        width: 3.4rem;
+        height: 2.6rem;
+        @include bg-contain('/icons/warrior.svg');
+      }
+    }
+    .archetype_name{
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      font-size: 1.4em;
+      line-height: 1.1;
+      text-align: center;
+      color: #DBB56D;
+    }
+  }
+  .prizelist_classes-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .class_item{
+      position: relative;
+      display: flex;
+      height: 4rem;
+      flex-basis: 20%;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover{
+        .class_icon:after, .class_name{
+          opacity: 0.7;
+        }
+      }
+      &.active{
+        .class_icon:after, .class_name{
+          cursor: default;
+          opacity: 1;
+        }
+      }
+    }
+    .class_icon {
+      width: 6rem;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translateXY();
+        opacity: 0.3;
+        transition: .5s opacity ease;
+      }
+
+      &.paladin:after {
+        width: 3.6rem;
+        height: 3.7rem;
+        @include bg-contain('/icons/paladin.svg');
+      }
+
+      &.berserk:after {
+        width: 3.6rem;
+        height: 3.7rem;
+        @include bg-contain('/icons/berserk.svg');
+      }
+
+      &.demon_hunter:after {
+        width: 3.7rem;
+        height: 3.7rem;
+        @include bg-contain('/icons/demon_hunter.svg');
+      }
+
+      &.destroyer:after {
+        width: 3.7rem;
+        height: 3.7rem;
+        @include bg-contain('/icons/destroyer.svg');
+      }
+    }
+    .class_name{
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      margin-top: 0.6rem;
+      font-size: 1em;
+      line-height: 1;
+      text-align: center;
+      color: $yellow;
+      opacity: 0.3;
+      transition: .5s opacity ease;
+    }
+  }
+}
+

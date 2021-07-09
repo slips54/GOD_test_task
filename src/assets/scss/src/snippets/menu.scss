@@ -1,0 +1,27 @@
+#nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  z-index: 10;
+  background-color: $gray;
+}
+.nav-link{
+  font-size: 1.4em;
+  line-height: 1;
+  text-align: center;
+  color: $yellow;
+  opacity: 0.4;
+  transition: .3s opacity ease;
+  text-decoration: none;
+  &+.nav-link{
+    margin-left: 3rem;
+  }
+  &.router-link-exact-active{
+    opacity: 1;
+  }
+  &:hover{
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "classes" : {
+    "berserk": {
+      "name": "Берсерк",
+      "weapon_img": "berserk.png"
+    },
+    "demon_hunter": {
+      "name": "Охотник на&nbsp;демонов",
+      "weapon_img": "devil_hunter.png"
+    },
+    "paladin": {
+      "name": "Паладин",
+      "weapon_img": "paladin.png"
+    },
+    "destroyer": {
+      "name": "Дестроер",
+      "weapon_img": "destroyer.png"
+    }
+  },
+  "archetypes" : {
+    "archer": {
+      "name": "Стрелок",
+      "classes": ["berserk", "demon_hunter"]
+    },
+    "monk": {
+      "name": "Монах",
+      "classes": ["berserk", "paladin"]
+    },
+    "wizard": {
+      "name": "Маг",
+      "classes": ["demon_hunter", "paladin"]
+    },
+    "assassin": {
+      "name": "Ассасин",
+      "classes": ["berserk", "demon_hunter", "paladin"]
+    },
+    "warrior": {
+      "name": "Воин",
+      "classes": ["berserk", "demon_hunter", "paladin", "destroyer"]
+    }
+  }
+}
